@@ -1,0 +1,45 @@
+﻿Data Analytics 
+SESSION 5: Data Management Using R 
+Assignment 1 
+
+1. How many vowels are there in the names of USA States? 
+
+Answer:
+
+states<- rowname(USArrest)
+states
+
+library(stringr)
+str_count(states, "a")
+str_count(states, "e")
+str_count(states, "i")
+str_count(states, "o")
+str_count(states, "u") 
+
+# to sum
+vowela <- str_count(states, "a")
+vowele <- str_count(states, "e")
+voweli <- str_count(states, "i")
+vowelo <- str_count(states, "o")
+vowelu <- str_count(states, "u")
+                       
+sum(vowela, vowele, voweli, vowelo, vowelu)        	# output:  164                          
+sum(vowela)						# output:  57
+sum(vowele)						# output:  28
+sum(voweli)   						# output:  39
+sum(vowelo) 						# output:  33
+sum(vowelu) 						# output:  7
+
+
+2. Visualize the vowels distribution. 
+
+Answer : 
+# to visualize the vowel a distribution
+
+barplot(vowela, col = "blue", main = "Distribution of Vowel A")
+barplot(vowele, col = "blue", main = "Distribution of Vowel E")
+barplot(voweli, col = "blue", main = "Distribution of Vowel I")
+barplot(vowelo, col = "blue", main = "Distribution of Vowel O")
+barplot(vowelu, col = "blue", main = "Distribution of Vowel U")
+
+
